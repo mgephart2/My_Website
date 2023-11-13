@@ -6,7 +6,7 @@
     <title>Michael Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload="onload()" class="dark__mode">
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
@@ -24,8 +24,9 @@
                     <a href="#about" class="navbar__links" id="about-page">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#services" class="navbar__links" id="services-page">Services</a>
+                    <a href="#career" class="navbar__links" id="career-page">Career</a>
                 </li>
+                <button class="mode__toggle" onclick="lightMode()"></button>
             </ul>
         </div>
     </nav>
@@ -35,7 +36,7 @@
         <div class="hero__container">
             <div class="hero__content">
                 <h1 class="hero__heading">Michael Gephart</h1>
-                <p class="hero__description">I'm a senior computer science student at Marquette University in pursuit of a computer programming career.</p>
+                <p class="hero__description">I'm a senior computer science student at Marquette University set to graduate in May of 2024. I am currently in pursuit of a computer programming career.</p>
             </div>
             <div class="hero__img--card">
                 <img src="images/pic3.jpg" alt="pic" id="hero__img">
@@ -53,19 +54,18 @@
             </div>
             <div class="main__content">
                 <h1>Who am I?</h1>
-                <h2>I'm a senior computer science student at Marquette University set to graduate in May of 2024. I am currently in pursuit of a computer programming career.</h2>
+                <h2>I am a problem solver who enjoys helping others. I love using my skills to make the people around me better.</h2>
             </div>
         </div>
     </div>
 
-    
-    <!-- Services Section -->
-    <div class="services" id="services">
+    <!-- Career Section -->
+    <div class="career" id="career">
         <h1>Explore my career aspirations</h1>
-        <div class="services__wrapper">
-            <div class="services__card">
+        <div class="career__wrapper">
+            <div class="career__card">
                 <h2>My Resume</h2>
-                <div class="services__btn"><button type="button" onclick="location.href='resume.html'">Click Here</button></div>
+                <div class="career__btn"><button type="button" onclick="location.href='resume.html'">Click Here</button></div>
             </div>
         </div>
     </div>

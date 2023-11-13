@@ -6,9 +6,21 @@
     scroll-behavior: smooth;
 }
 
+.dark__mode {
+    --background-color: #131313;
+    --color: #edf2fc;
+    --icon: url('images/sun.png');
+}
+
+.light__mode {
+    --background-color: #edf2fc;
+    --color: #131313;
+    --icon: url('images/moon.png');
+}
+
 /* Navbar Section */
 .navbar {
-    background: #131313;
+    background: var(--background-color);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -55,7 +67,7 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: var(--color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +80,17 @@
 .navbar__links:hover {
     color: #9518fc;
     transition: all 0.3s ease;
+}
+
+.mode__toggle {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--background-color);
+    background-image: var(--icon);
+    background-size: cover;
 }
 
 @media screen and (max-width: 960px) {
@@ -94,7 +117,7 @@
     }
 
     .navbar__menu.active {
-        background: #131313;
+        background: var(--background-color);
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -112,7 +135,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background: #fff;
+        background: var(--color);
     }
 
     .navbar__item {
@@ -153,7 +176,7 @@
 
 /* Hero Section */
 .hero {
-    background: #131313;
+    background: var(--background-color);
     padding: 5rem 0;
 }
 
@@ -169,7 +192,7 @@
 }
 
 .hero__content {
-    color: #fff;
+    color: var(--color);
     width: 100%;
 }
 
@@ -188,7 +211,7 @@
 .hero__description {
     font-size: 2rem;
     font-weight: normal;
-    color: #fff;
+    color: var(--color);
 }
 
 .highlight {
@@ -252,7 +275,7 @@
 
 /* About Section */
 .main {
-    background-color: #131313;
+    background-color: var(--background-color);
     padding: 5rem 0;
 }
 
@@ -270,8 +293,9 @@
 }
 
 .main__content {
-    color: #fff;
+    color: var(--color);
     width: 100%;
+    text-align: center;
 }
 
 .main__content h1 {
@@ -288,7 +312,7 @@
 .main__content h2 {
     font-size: 2rem;
     font-weight: normal;
-    color: #fff;
+    color: var(--color);
 }
 
 .main__img--container {
@@ -361,9 +385,9 @@
     }
 }
 
-/* Services Section */
-.services {
-    background: #131313;
+/* Career Section */
+.career {
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -372,7 +396,7 @@
     padding: 5rem 0;
 }
 
-.services h1 {
+.career h1 {
     background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -383,7 +407,7 @@
     font-size: 2.5rem;
 }
 
-.services__card {
+.career__card {
     margin: 10px;
     height: 400px;
     width: 600px;
@@ -398,38 +422,38 @@
     transition: 0.3s ease-in;
 }
 
-.services__card h2 {
+.career__card h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.services__card p {
+.career__card p {
     text-align: center;
     margin-top: 24px;
     font-size: 20px;
 }
 
-.services__btn {
+.career__btn {
     display: flex;
     justify-content: center;
     margin-top: 16px;
 }
 
-.services__card button {
-    color: #fff;
+.career__card button {
+    color: var(--color);
     padding: 14px 24px;
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #131313;
+    background: var(--background-color);
     font-size: 1rem;
 }
 
-.services__card button:hover {
+.career__card button:hover {
     cursor: pointer;
 }
 
-.services__card:hover {
+.career__card:hover {
     transform: scale(1.075);
     transition: 0.3s ease-in;
     cursor: pointer;
@@ -437,7 +461,7 @@
 
 @media screen and (max-width: 1100px) {
     
-    .services__wrapper {
+    .career__wrapper {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -445,11 +469,11 @@
 
 @media screen and (max-width: 650px) {
 
-    .services h1 {
+    .career h1 {
         text-align: center;
     }
 
-    .services__card {
+    .career__card {
         height: 300px;
         width: 450px;
     }
@@ -457,16 +481,16 @@
 
 @media screen and (max-width: 520px) {
     
-    .services h1 {
+    .career h1 {
         text-align: center;
         font-size: 2rem;
     }
     
-    .services__wrapper {
+    .career__wrapper {
         grid-template-columns: 1fr;
     }
 
-    .services__card {
+    .career__card {
         height: 200px;
         width: 300px;
     }

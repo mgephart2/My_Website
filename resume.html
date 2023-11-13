@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resume Page</title>
     <link rel="stylesheet" href="stylesResume.css">
 </head>
-<body>
+<body onload="onload()" class="dark__mode">
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
             <a href="#home" id="navbar__logo">Michael Gephart</a>
+            <ul class="navbar__menu">
+                <button class="mode__toggle" onclick="lightMode()"></button>
+            </ul>
         </div>
     </nav>
     <!-- Resume Section -->
@@ -22,5 +25,6 @@
         <div class="resume__img--container">
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

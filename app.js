@@ -1,6 +1,7 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar__logo');
+var icon = document.getElementById("icon");
 
 //Display Mobile Menu
 const mobileMenu = () => {
@@ -15,7 +16,7 @@ const highlightMenu = () => {
     const elem = document.querySelector('.highlight')
     const homeMenu = document.querySelector('#home-page')
     const aboutMenu = document.querySelector('#about-page')
-    const servicesMenu = document.querySelector('#services-page')
+    const careerMenu = document.querySelector('#career-page')
     let scrollPos = window.scrollY
     //console.log(scrollPos);
 
@@ -27,11 +28,11 @@ const highlightMenu = () => {
     } else if(window.innerWidth > 960 && scrollPos < 1000) {
         aboutMenu.classList.add('highlight')
         homeMenu.classList.remove('highlight')
-        servicesMenu.classList.remove('highlight')
+        careerMenu.classList.remove('highlight')
         return
     }
     else if(window.innerWidth > 960 && scrollPos < 1500) {
-        servicesMenu.classList.add('highlight')
+        careerMenu.classList.add('highlight')
         aboutMenu.classList.remove('highlight')
         return
     }
@@ -55,3 +56,18 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu)
 navLogo.addEventListener('click', hideMobileMenu)
+
+//Dark/Light mode implementation
+function lightMode() {
+    const wasLightMode = localStorage.getItem('lightMode') === 'true';
+    localStorage.setItem('lightMode', !wasLightMode);
+    const element = document.body;
+    element.classList.toggle('light__mode', !wasLightMode);
+    element.classList.toggle('dark__mode', wasLightMode);
+}
+
+function onload() {
+    const isLightMode = localStorage.getItem('lightMode') === 'true';
+    document.body.classList.toggle('light__mode', isLightMode);
+    document.body.classList.toggle('dark__mode', !isLightMode);
+}
