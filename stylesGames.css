@@ -73,25 +73,27 @@
     background-size: cover;
 }
 
-/* Resume Section */
-.resume {
+/* Motivation Section */
+.motivation {
     background: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 5rem 0;
+    padding-top: 5rem;
 }
 
-.resume__content {
-    width: 100%;
+.motivation__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    padding-top: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
 }
 
 .home__btn {
@@ -110,7 +112,7 @@
     outline: none;
 }
 
-.resume__heading {
+.motivation__heading {
     font-size: 4rem;
     background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
     background-size: 100%;
@@ -121,44 +123,87 @@
     padding: 5rem;
 }
 
-.resume__img--container {
+.motivation__description {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--color);
+}
+
+/* Game Section */
+.game {
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 5rem 0;
+}
+
+.game__heading {
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.game__wrapper {
+    display: flex;
+}
+
+.game__card {
     margin: 10px;
-    height: 880px;
-    width: 680px;
+    height: 400px;
+    width: 300px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
-    background-image: url('images/Gephart_Resume_COSC.jpg');
     background-size: cover;
+    transition: 0.3s ease-in;
 }
 
-@media screen and (max-width: 750px) {
-    
-    .resume__heading {
-        text-align: center;
-    }
-
-    .resume__img--container {
-        height: 660px;
-        width: 510px;
-    }
+.game__card:nth-child(1) {
+    background-image: url('images/PongPic.png');
+    background-position: right;
 }
 
-@media screen and (max-width: 520px) {
-    
-    .resume__img--container {
-        height: 440px;
-        width: 340px;
-    }
+.game__card:nth-child(2) {
+    background-image: url('images/BunnyHopPic.png');
 }
 
-@media screen and (max-width: 400px) {
-    
-    .resume__img--container {
-        height: 275px;
-        width: 212.5px;
-    }
+.game__card:nth-child(3) {
+    background-image: url('images/MinesweeperPic.png');
+}
+
+.game__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.game__card button {
+    color: var(--color);
+    padding: 14px 24px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: var(--background-color);
+    font-size: 1rem;
+}
+
+.game__card button:hover {
+    cursor: pointer;
+}
+
+.game__card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
 }
